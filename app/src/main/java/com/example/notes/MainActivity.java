@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         super.onOptionsItemSelected(item);
         if(item.getItemId() == R.id.addNote){
             Intent intent = new Intent(getApplicationContext(),Main2Activity.class);
+            intent.putExtra("View",1);
             startActivity(intent);
             return true;
         }else{
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     {
         Intent intent = new Intent(getApplicationContext(),Main2Activity.class);
         intent.putExtra("itemId",i);
+        intent.putExtra("View",0);
         startActivity(intent);
     }
     @Override

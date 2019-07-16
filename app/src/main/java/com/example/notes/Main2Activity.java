@@ -8,7 +8,9 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.HashSet;
 
@@ -18,9 +20,18 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
+        TextView textView = findViewById(R.id.addNewNote);
         EditText editText = (EditText) findViewById(R.id.editText);
         Intent intent = getIntent();
         itemId = intent.getIntExtra("itemId",-1);
+        int view = intent.getIntExtra("View",-1);
+        Log.i("View",Integer.toString(view));
+        if(view==1){
+            textView.setVisibility(View.VISIBLE);
+        }else{
+            textView.setVisibility(View.INVISIBLE);
+        }
         if(itemId!=-1){
             Log.i("Editetxt",""+String.valueOf(editText));
             editText.setText(MainActivity.arrayList.get(itemId));

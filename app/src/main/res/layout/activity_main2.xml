@@ -8,8 +8,10 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="369dp"
-        android:layout_height="550dp"
+        android:layout_width="371dp"
+        android:layout_height="625dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         android:autoText="false"
         android:ems="10"
         android:gravity="top"
@@ -17,7 +19,22 @@
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addNewNote" />
+
+    <TextView
+        android:id="@+id/addNewNote"
+        android:layout_width="210dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="161dp"
+        android:layout_marginRight="161dp"
+        android:text="Add a new Note"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
